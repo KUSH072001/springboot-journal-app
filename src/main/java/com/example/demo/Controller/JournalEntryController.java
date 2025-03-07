@@ -24,6 +24,7 @@ public class JournalEntryController {
     }
 
     @PutMapping("/update/{id}")
+
     public String updateEntry(@PathVariable String id, @RequestBody JournalEntry updateEntry) {
         JournalEntry old = journalEntryService.findByid(id).orElse(null);
         if (old != null) {
